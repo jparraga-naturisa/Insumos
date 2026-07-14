@@ -1,6 +1,5 @@
+import { PROXY_BASE } from '@/services/http/env'
 import { getToken } from '@/services/http/session'
-
-const PROXY_BASE = import.meta.env.DEV ? '' : 'https://naturisa-proxy.parragajonathan965.workers.dev'
 
 type ApiRequestOptions = {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE'
