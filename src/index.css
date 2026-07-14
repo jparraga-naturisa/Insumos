@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  /* 60% — dominant neutral canvas */
+  --canvas: #f5f4f0;
+  --surface: #ffffff;
+
+  /* 30% — secondary neutral (text, lines) */
+  --ink: #20242b;
+  --ink-soft: #6b6f76;
+  --line: #e4e1da;
+
+  /* 10% — accent */
+  --accent: #183d5b;
+}
+
+@theme {
+  --font-sans: 'Segoe UI', system-ui, Roboto, sans-serif;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-canvas text-ink antialiased;
+  }
+}
